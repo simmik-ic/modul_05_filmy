@@ -75,7 +75,6 @@ class Biblioteka(list):
 def wypisz(pozycje):
     for poz in pozycje:
         print(f"{poz}  - odtwarzany {poz.odtworzenia} raz{koncowka(poz.odtworzenia)}")
-
 def koncowka(i):
     if i == 1: return ''
     else: return 'y'
@@ -88,14 +87,17 @@ print("Biblioteka filmów")
 
 #wypełnij bibliotekę treścią
 biblioteka = Biblioteka([
-    Filmy('Crown', 2023, 'animacja'), 
+    Filmy('Mysz, która ryknęła', 1959, 'komedia'), 
     Filmy('Titanic', 1997, 'katastroficzny'), 
-    Seriale(2, 45, 'Simpsonowie', 1995, 'animacja'),
-    Filmy('Tombstone', 1980, 'western'),
+    Seriale(2, 20, 'Simpsonowie', 1989, 'animacja'),
+    Filmy('Tombstone', 1993, 'western'),
     Filmy('Snow White', 2025, 'klapa'), 
-    Filmy('Armageddon', 2000, 'katastroficzny'),
-    Seriale(1, 3, 'House MD', 1997, 'horror')])
+    Filmy('Avengers: Endgame', 2019, 'superhero'),
+    Filmy('Avengers: Infinity War', 2018, 'superhero'),
+    Filmy('Armageddon', 1998, 'katastroficzny'),
+    Seriale(2, 1, 'House MD', 2004, 'medyczny')])
 biblioteka.add_season('Futurama', 1999, 'sci-fi', 1, 13)
+biblioteka.add_season('House MD', 2004, 'medyczny', 1, 22)
 
 #wygeneruj odtworzenia
 biblioteka.multi_generate_views()
